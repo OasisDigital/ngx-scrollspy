@@ -1,6 +1,6 @@
 {
   "name": "@oasisdigital/ngx-scrollspy",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Angular ScrollSpy Service",
   "author": "Oasis Digital <team@oasisdigital.com>",
   "devDependencies": {

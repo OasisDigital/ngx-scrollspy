@@ -1,9 +1,11 @@
 {
   "name": "@oasisdigital/ngx-scrollspy",
+  "version": "1.1.0",
   "description": "Angular ScrollSpy Service",
   "author": "Oasis Digital <team@oasisdigital.com>",
   "license": "MIT",
   "peerDependencies": {
+    "@angular/core": "^5.0.0",
     "@angular/common": "^5.0.0",
     "rxjs": "^5.3.0"
   },
