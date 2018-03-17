@@ -1,7 +1,7 @@
 {
-  "name": "ngx-scrollspy",
+  "name": "@oasisdigital/ngx-scrollspy",
   "description": "Angular ScrollSpy Service",
-  "author": "João Ribeiro <jonnybgod@gmail.com> (http://github.com/JonnyBGod)",
+  "author": "Oasis Digital <team@oasisdigital.com>",
   "devDependencies": {
     "@angular/common": "^5.0.0",
     "@angular/compiler": "^5.0.0",
@@ -33,18 +33,18 @@
     "reflect-metadata": "^0.1.10",
     "rimraf": "^2.6.1",
     "rxjs": "^5.3.0",
-    "semantic-release": "^8.2.0",
-    "source-map-loader": "^0.2.1",
+    "semantic-release": "^15.1.2",
+    "source-map-loader": "^0.2.3",
     "systemjs": "^0.20.12",
     "ts-helpers": "^1.1.1",
     "tslint": "^5.1.0",
     "tslint-loader": "^3.5.2",
-    "typescript": "^2.4.0",
+    "typescript": "~2.6.2",
     "webpack": "^3.8.1",
-    "zone.js": "^0.8.5"
+    "zone.js": "^0.8.20"
   },
   "bugs": {
-    "url": "http://github.com/jonnybgod/ngx-scrollspy/issues"
+    "url": "https://github.com/OasisDigital/ngx-scrollspy/issues"
   },
   "scripts": {
     "rimraf": "rimraf",
@@ -67,7 +67,7 @@
   "metadata": "dist/ngx-scrollspy.metadata.json",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jonnybgod/ngx-scrollspy.git"
+    "url": "https://github.com/OasisDigital/ngx-scrollspy.git"
   },
   "keywords": [
     "angular2",

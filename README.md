@@ -1,10 +1,17 @@
-[![npm version](https://img.shields.io/npm/v/ngx-scrollspy.svg?style=flat)](https://www.npmjs.com/package/ngx-scrollspy)
-[![Build Status](https://img.shields.io/travis/JonnyBGod/ngx-scrollspy/master.svg?style=flat)](https://travis-ci.org/JonnyBGod/ngx-scrollspy)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/fc203d3b26f745b4af0251228dde6b2e)](https://www.codacy.com/app/jonnybgod/ngx-scrollspy?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=JonnyBGod/ngx-scrollspy&amp;utm_campaign=Badge_Grade)
-[![Coverage Status](https://coveralls.io/repos/github/JonnyBGod/ngx-scrollspy/badge.svg?branch=master)](https://coveralls.io/github/JonnyBGod/ngx-scrollspy?branch=master)
-[![devDependency Status](https://david-dm.org/JonnyBGod/ngx-scrollspy/dev-status.svg)](https://david-dm.org/JonnyBGod/ngx-scrollspy#info=devDependencies)
+# Oasis Digital fork of ngx-scrollspy
 
-[![NPM downloads](https://img.shields.io/npm/dm/ngx-scrollspy.svg)](https://npmjs.org/package/ngx-scrollspy)
+This is a fork of `ngx-scrollspy`. The original project is under relatively slow
+development as of early 2018.
+
+Features added by this fork:
+
+* Works with Universal projects; doesn't do anything during server rendering,
+  therefore does not attempt to access the DOM, therefore does not cause
+  Universal errors.
+
+-----
+
+# Original docs follow
 
 You can use this angular2 service to spy scroll events from ```window``` or any other scrollable element.
 

@@ -1,7 +1,7 @@
 {
-  "name": "ngx-scrollspy",
+  "name": "@oasisdigital/ngx-scrollspy",
   "description": "Angular ScrollSpy Service",
-  "author": "João Ribeiro <jonnybgod@gmail.com> (http://github.com/JonnyBGod)",
+  "author": "Oasis Digital <team@oasisdigital.com>",
   "license": "MIT",
   "peerDependencies": {
     "@angular/common": "^5.0.0",
@@ -9,10 +9,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jonnybgod/ngx-scrollspy.git"
+    "url": "https://github.com/OasisDigital/ngx-scrollspy.git"
   },
   "bugs": {
-    "url": "http://github.com/jonnybgod/ngx-scrollspy/issues"
+    "url": "https://github.com/OasisDigital/ngx-scrollspy/issues"
   },
   "keywords": [
     "angular2",
