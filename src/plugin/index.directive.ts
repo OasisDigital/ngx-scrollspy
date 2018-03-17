@@ -5,8 +5,12 @@ import {
   Input,
   OnInit,
   AfterViewInit,
+  PLATFORM_ID,
+  Inject,
   OnDestroy
 } from '@angular/core';
+
+import { isPlatformBrowser } from '@angular/common';
 
 import { ScrollSpyIndexService } from './index.service';
 
@@ -30,6 +34,7 @@ export class ScrollSpyIndexDirective implements OnInit, AfterViewInit, OnDestroy
 
   constructor(
     private elRef: ElementRef,
+    @Inject(PLATFORM_ID) private platformId: Object,
     private scrollSpyIndex: ScrollSpyIndexService
   ) {
     this.el = elRef.nativeElement;
@@ -48,10 +53,14 @@ export class ScrollSpyIndexDirective implements OnInit, AfterViewInit, OnDestroy
   }
 
   ngAfterViewInit() {
-    this.scrollSpyIndex.setIndex(this.options.id, this.el.getElementsByClassName(this.options.selector));
+    if (isPlatformBrowser(this.platformId)) {
+      this.scrollSpyIndex.setIndex(this.options.id, this.el.getElementsByClassName(this.options.selector));
+    }
   }
 
   ngOnDestroy() {
-    this.scrollSpyIndex.deleteIndex(this.options.id);
+    if (isPlatformBrowser(this.platformId)) {
+      this.scrollSpyIndex.deleteIndex(this.options.id);
+    }
   }
 }

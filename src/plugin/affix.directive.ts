@@ -5,8 +5,12 @@ import {
   Input,
   AfterViewInit,
   OnDestroy,
+  PLATFORM_ID,
+  Inject,
   ChangeDetectorRef
 } from '@angular/core';
+
+import { isPlatformBrowser } from '@angular/common';
 
 import { ScrollSpyService } from '../core/service';
 
@@ -46,12 +50,17 @@ export class ScrollSpyAffixDirective implements AfterViewInit, OnDestroy {
   constructor(
     private ref: ChangeDetectorRef,
     private elRef: ElementRef,
+    @Inject(PLATFORM_ID) private platformId: Object,
     private scrollSpy: ScrollSpyService
   ) {
     this.el = elRef.nativeElement;
   }
 
   ngAfterViewInit() {
+    if (! isPlatformBrowser(this.platformId)) {
+      return;
+    }
+
     if (!this.options) {
       this.options = {};
     }
@@ -71,7 +80,7 @@ export class ScrollSpyAffixDirective implements AfterViewInit, OnDestroy {
           setTimeout(() => this.update(e.target.scrollY));
         } else if (typeof e.target.pageYOffset !== 'undefined') {
           setTimeout(() => this.update(e.target.pageYOffset));
-        } else if(e.target.parentWindow && e.target.parentWindow.pageYOffset) {
+        } else if (e.target.parentWindow && e.target.parentWindow.pageYOffset) {
           setTimeout(() => this.update(e.target.parentWindow.pageYOffset));
         }
       });
@@ -106,6 +115,8 @@ export class ScrollSpyAffixDirective implements AfterViewInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    this.scrollStream$.unsubscribe();
+    if (this.scrollStream$) {
+      this.scrollStream$.unsubscribe();
+    }
   }
 }

@@ -64,15 +64,12 @@ export class ScrollSpyIndexRenderComponent implements OnInit, AfterViewInit, OnD
   public changeStream$: any;
   public scrollStream$: any;
 
-  public el: HTMLElement;
-
   constructor(
     private ref: ChangeDetectorRef,
     private elRef: ElementRef,
     private scrollSpy: ScrollSpyService,
     private scrollSpyIndex: ScrollSpyIndexService
   ) {
-    this.el = elRef.nativeElement;
   }
 
   ngOnInit() {
